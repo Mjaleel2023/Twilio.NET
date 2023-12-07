@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "abc": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "TWILIO_ACCOUNT_SID": "ACc441ccddfb09bbad9251737f90617c1b",
+        "TWILIO_AUTH_TOKEN": "7b426c081e49053e6906c40f058de253",
+        "TWILIO_SERVICE_SID": "VA7a114f6a7372ab9c29ccdb712b818e96"
+      }
+    }
+  }
+}
