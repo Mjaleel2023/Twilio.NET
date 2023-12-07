@@ -3,14 +3,14 @@
 
 name: Build and deploy dotnet core app to Azure Function App - calculator-prgm
 
-on: |+
+on:
   push:
     branches:
       - main
   workflow_dispatch:
 
 env:
-  AZURE_FUNCTIONAPP_PACKAGE_PATH: '.' # set this to the path to your web app project, defaults to the repository root
+  AZURE_FUNCTIONAPP_PACKAGE_PATH: ''./myrepo' # set this to the path to your web app project, defaults to the repository root
   DOTNET_VERSION: 'v4.0' # set this to the dotnet version to use
 
 jobs:
@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: 'Checkout GitHub Action'
         uses: actions/checkout@v4
+
+      - name: Clone Repository
+        run: git clone https://github.com/Mjaleel2023/Twilio.NET.git myrepo
+		
 
       - name: Setup DotNet ${{ env.DOTNET_VERSION }} Environment
         uses: actions/setup-dotnet@v1
